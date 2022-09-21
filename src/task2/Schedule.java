@@ -31,4 +31,10 @@ public class Schedule {
         return mapSubjectDates.equals(schedule.mapSubjectDates);
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder builder = new StringBuilder();
+        mapSubjectDates.forEach((k, v)->builder.append(k.getNameOfSubject()).append(" ").append(v));
+        return builder.toString();
+    }
 }

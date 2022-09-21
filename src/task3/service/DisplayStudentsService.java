@@ -17,10 +17,10 @@ public class DisplayStudentsService {
     public List<Student> getStudents(final String nameOfSubject) {
         final List<Student> studentList = new ArrayList<>();
         for (final Student student : group.getStudent()) {
-           final List<Subject> subjectList = new ArrayList<>();
+            //final List<Subject> subjectList = new ArrayList<>();      ????
             for (final Subject subject : student.getSubject()) {
                 if (subject.getNameOfSubject().equals(nameOfSubject))
-                studentList.add(student);
+                    studentList.add(student);
             }
 
         }

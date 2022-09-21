@@ -8,17 +8,22 @@ import java.util.HashMap;
 
 public class AddNewSubjectService {
    // private University university;
-    private Group group;
+    final private Group group;
 
     public AddNewSubjectService(final Group group) {
         this.group = group;
     }
 
-    public void addSubject(final String nameOfGroup, final String nameOfSubject) {
+//    public void addSubject(final String nameOfGroup, final String nameOfSubject) {
+//        for (final Student student : group.getStudent()) {
+//            if (student.getGroup().equals(nameOfGroup)) {
+//                student.getSubject().add(new Subject(nameOfSubject, new HashMap<>()));
+//            }
+//        }
+//    }
+    public void addSubject(final Subject subject) {
         for (final Student student : group.getStudent()) {
-            if (student.getGroup().equals(nameOfGroup)) {
-                student.getSubject().add(new Subject(nameOfSubject, new HashMap<>()));
-            }
+            student.getSubject().add(subject);
         }
     }
 }
