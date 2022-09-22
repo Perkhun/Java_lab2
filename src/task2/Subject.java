@@ -41,7 +41,7 @@ public class Subject {
 
     @Override
     public int hashCode() {
-        return Objects.hash(nameOfSubject, mapStudentMark);
+        return Objects.hash(nameOfSubject);
     }
 
     @Override

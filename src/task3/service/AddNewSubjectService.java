@@ -4,26 +4,18 @@ import task2.Group;
 import task2.Student;
 import task2.Subject;
 
-import java.util.HashMap;
 
 public class AddNewSubjectService {
-   // private University university;
+
     final private Group group;
 
     public AddNewSubjectService(final Group group) {
         this.group = group;
     }
 
-//    public void addSubject(final String nameOfGroup, final String nameOfSubject) {
-//        for (final Student student : group.getStudent()) {
-//            if (student.getGroup().equals(nameOfGroup)) {
-//                student.getSubject().add(new Subject(nameOfSubject, new HashMap<>()));
-//            }
-//        }
-//    }
     public void addSubject(final Subject subject) {
-        for (final Student student : group.getStudent()) {
-            student.getSubject().add(subject);
+        if (!group.getStudent().isEmpty()) {
+            group.getStudent().get(0).getSubject().add(subject); //because all subjects of students in the same group must be the same
         }
     }
 }

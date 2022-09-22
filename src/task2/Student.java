@@ -9,9 +9,6 @@ public class Student {
     private String nameOfStudent;
     private String surnameOfStudent;
     private List<Subject> subject;
-
-
-
     public Student() {
     }
 

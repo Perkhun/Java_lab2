@@ -19,33 +19,23 @@ public class Task2 {
         ).collect(Collectors.toList());
 
         final Map<Subject, List<LocalDate>> schedule1map = new HashMap<>();
-        schedule1map.put(subject1.get(0), Stream.of(LocalDate.of(2022, 10, 20)).collect(Collectors.toList()));
-        schedule1map.put(subject1.get(1), Stream.of(LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 19)).collect(Collectors.toList()));
+        schedule1map.put(subject1.get(0), Stream.of(
+                LocalDate.of(2022, 10, 20))
+                .collect(Collectors.toList()));
+        schedule1map.put(subject1.get(1), Stream.of(
+                LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 19))
+                .collect(Collectors.toList()));
+
         final Schedule schedule1 = new Schedule(schedule1map);
-
         final Map<Subject, List<LocalDate>> schedule11map = new HashMap<>();
-        schedule11map.put(subject1.get(0), Stream.of(LocalDate.of(2022, 10, 11)).collect(Collectors.toList()));
-        schedule11map.put(subject1.get(1), Stream.of(LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 19)).collect(Collectors.toList()));
+        schedule11map.put(subject1.get(0), Stream.of(
+                LocalDate.of(2022, 10, 11))
+                .collect(Collectors.toList()));
+        schedule11map.put(subject1.get(1), Stream.of(
+                LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 19))
+                .collect(Collectors.toList()));
+
         final Schedule schedule11 = new Schedule(schedule11map);
-
-
-
-//        final Schedule schedule1 = new Schedule(
-//                Map.of(
-//                        subject1.get(0), Stream.of(LocalDate.of(2022, 10, 20)).collect(Collectors.toList()),
-//                        subject1.get(1), Stream.of(LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 22)).collect(Collectors.toList())
-//                )
-//
-//        );
-//
-//        final Schedule schedule11 = new Schedule(
-//                Map.of(
-//                        subject1.get(0), Stream.of(LocalDate.of(2022, 10, 20)).collect(Collectors.toList()),
-//                        subject1.get(1), Stream.of(LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 22)).collect(Collectors.toList())
-//                )
-//
-//        );
-
         group1.getStudent().add(new Student("Sany", "Per", group1, schedule1, subject1));
         group1.getStudent().add(new Student("Mary", "Dub", group1, schedule11, subject1));
 
@@ -54,9 +44,7 @@ public class Task2 {
         subject1.get(1).getMapStudentMark().put(group1.getStudent().get(0), 55);
         subject1.get(1).getMapStudentMark().put(group1.getStudent().get(1), 63);
 
-
         university.getGroups().add(group1);
-
 
         final Group group2 = new Group();
         group2.setNameOfGroup("КН-21");
@@ -68,26 +56,23 @@ public class Task2 {
                 )
         ).collect(Collectors.toList());
 
-
         final Map<Subject, List<LocalDate>> schedule2map = new HashMap<>();
-        schedule2map.put(subject1.get(0), Stream.of(LocalDate.of(2022, 10, 11)).collect(Collectors.toList()));
-        schedule2map.put(subject1.get(1), Stream.of(LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 19)).collect(Collectors.toList()));
+        schedule2map.put(subject1.get(0), Stream.of(
+                LocalDate.of(2022, 10, 11))
+                .collect(Collectors.toList()));
+        schedule2map.put(subject1.get(1), Stream.of(
+                LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 19))
+                .collect(Collectors.toList()));
         final Schedule schedule2 = new Schedule(schedule2map);
 
         final Map<Subject, List<LocalDate>> schedule22map = new HashMap<>();
-        schedule22map.put(subject1.get(0), Stream.of(LocalDate.of(2022, 10, 11)).collect(Collectors.toList()));
-        schedule22map.put(subject1.get(1), Stream.of(LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 19)).collect(Collectors.toList()));
+        schedule22map.put(subject1.get(0), Stream.of(
+                LocalDate.of(2022, 10, 11))
+                .collect(Collectors.toList()));
+        schedule22map.put(subject1.get(1), Stream.of(
+                LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 19))
+                .collect(Collectors.toList()));
         final Schedule schedule22 = new Schedule(schedule22map);
-
-
-
-//        final Schedule schedule22 = new Schedule(
-//                Map.of(
-//                        subject1.get(0), Stream.of(LocalDate.of(2022, 10, 11)).collect(Collectors.toList()),
-//                        subject1.get(1), Stream.of(LocalDate.of(2022, 10, 21), LocalDate.of(2022, 10, 19)).collect(Collectors.toList())
-//                )
-//
-//        );
 
         group2.getStudent().add(
                 new Student("Dave", "Rat", group2, schedule2, subject2));
@@ -101,11 +86,8 @@ public class Task2 {
 
         university.getGroups().add(group2);
 
-
         return university;
     }
-
-
     public static void main(final String[] args) {
 
         final University university = ourUniversity();

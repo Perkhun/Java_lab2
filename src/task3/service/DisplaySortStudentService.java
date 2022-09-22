@@ -2,16 +2,12 @@ package task3.service;
 
 import task2.Group;
 import task2.Student;
-import task2.University;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 public class DisplaySortStudentService {
     private Group group;
-
-
     public DisplaySortStudentService(final Group group) {
         this.group = group;
     }
@@ -25,14 +21,14 @@ public class DisplaySortStudentService {
         }); return studentList;
     }
 
-
     public void displaySortStudent(final List<Student> students) {
-      for (final Student student : students) {
-          System.out.println(student.getSurnameOfStudent() + student.getGroup());
-      }
+        for (final Student student : students) {
+            System.out.println(student.getSurnameOfStudent() + student.getGroup());
+        }
     }
 
 }
+
 
 
 

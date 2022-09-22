@@ -1,6 +1,6 @@
 package task1;
 
-public class task1 {
+public class Task1 {
     public static void main(final String[] args) {
         final DeLinkedList dequeue = new DeLinkedList();
 

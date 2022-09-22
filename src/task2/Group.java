@@ -6,8 +6,6 @@ import java.util.List;
 public class Group {
     private String nameOfGroup;
     private List<Student> student;
-
-
     public Group() {
     }
 
@@ -39,8 +37,6 @@ public class Group {
         final Group group = (Group) o;
         return nameOfGroup.equals(group.nameOfGroup) && student.equals(group.student);
     }
-
-
     @Override
     public String toString() {
         return "Group: " +

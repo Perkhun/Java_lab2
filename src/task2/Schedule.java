@@ -7,10 +7,8 @@ import java.util.Map;
 
 public class Schedule {
     private Map<Subject, List<LocalDate>> mapSubjectDates;
-
     public Schedule() {
     }
-
     public Schedule(final Map<Subject, List<LocalDate>> mapSubjectDates) {
         this.mapSubjectDates = mapSubjectDates;
     }

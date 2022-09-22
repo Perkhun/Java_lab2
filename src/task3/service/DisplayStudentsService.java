@@ -1,5 +1,4 @@
 package task3.service;
-
 import task2.Group;
 import task2.Student;
 import task2.Subject;
@@ -17,12 +16,10 @@ public class DisplayStudentsService {
     public List<Student> getStudents(final String nameOfSubject) {
         final List<Student> studentList = new ArrayList<>();
         for (final Student student : group.getStudent()) {
-            //final List<Subject> subjectList = new ArrayList<>();      ????
             for (final Subject subject : student.getSubject()) {
                 if (subject.getNameOfSubject().equals(nameOfSubject))
                     studentList.add(student);
             }
-
         }
         return studentList;
     }
@@ -32,6 +29,4 @@ public class DisplayStudentsService {
             System.out.println((student.getSurnameOfStudent() + student.getGroup()));
         }
     }
-
-
 }
