@@ -1,18 +1,11 @@
 package task3;
-
 import task2.*;
 import task3.service.AddDateService;
 import task3.service.AddNewSubjectService;
 import task3.service.DisplaySortStudentService;
 import task3.service.DisplayStudentsService;
-
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-
 public class Task3 {
 
     public static void main(final String[] args) {
